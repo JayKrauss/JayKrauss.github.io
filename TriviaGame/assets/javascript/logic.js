@@ -29,18 +29,81 @@ var startGame = function() {
 function endGame() {
     $('#homer').text("Game over, man! Game over!");
     $('#homerface').html("<img src='assets/images/gameover.jpg'>");
-    $('#questions').html(
-        "<br><br><br>" +
-        "<center>" +
-        "<h1>Well, I'm, sure you tried your best.</h1>" +
-        "<h4>Press Start to Try Again!</h4>" +
-        "</center>"
-    )
+
+    if (correctAnswers <= 5) {
+       character();
+       $('#charactername').text('You are a Ralph!')
+       $('#characterpicture').html(
+           "<img src=assets/images/ralphend.png>"
+       )
+    }
+     else if (correctAnswers > 5 && correctAnswers <= 10) {
+
+       character();
+       $('#charactername').text('You are a Nelson!')
+       $('#characterpicture').html(
+           "<img src=assets/images/nelsonend.png>"
+       )
+    
+    }
+    else if (correctAnswers > 10 && correctAnswers <= 12) {
+        character();
+       $('#charactername').text('You are a Milhouse!')
+       $('#characterpicture').html(
+           "<img src=assets/images/milhouseend.png>"
+       )
+    }
+    else if (correctAnswers > 12 && correctAnswers <= 15) {
+        character();
+       $('#charactername').text('You are a Homer!')
+       $('#characterpicture').html(
+           "<img src=assets/images/homerend.png>"
+       )
+    }
+    else if (correctAnswers > 15 && correctAnswers <= 17) {
+        character();
+       $('#charactername').text('You are a Bart!')
+       $('#characterpicture').html(
+           "<img src=assets/images/bartend.png>"
+       )
+    }
+
+    else if (correctAnswers > 17 && correctAnswers <= 19) {
+        character();
+       $('#charactername').text('You are a Comicbook Guy!')
+       $('#characterpicture').html(
+           "<img src=assets/images/comicend.png>"
+       )
+    }
+    
+    else if (correctAnswers = 20) {
+        character();
+        $('#charactername').text('You are a Frink!')
+        $('#characterpicture').html(
+            "<img src=assets/images/frinkend.png>"
+        )
+    }
+    
     $('#anykey').trigger('play');
     $('#homer').text("Any key? Which one's the any key?");
     $('#homerface').html("<img src='assets/images/homerthink2.jpg'>");
     stop();
     
+}
+
+function character() {
+    $('#questions').html(
+        "<br><br><center>" +
+        "<div class='container centered'> <div class='row'>" +
+        "<div class='col-6 col-sm-6'>" +
+        "<h4>You scored: " + correctAnswers + "</h4><br>" +
+        "<h4 id='charactername'></h4><br>" +
+        "<h4>Press Start to Try Again!</h4>" +
+        "</div>" +
+        "<div class='col-6 col-sm-6' id='characterpicture'></div>" +
+        "</div></div><br>" 
+       
+    )
 }
 
 function timer() {
