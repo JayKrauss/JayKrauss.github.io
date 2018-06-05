@@ -8,14 +8,15 @@ var radioObj;
 var intervalId;
 var totalQuestions = 0;
 
-var questions = [q1, q2, q3, q4, q5, q6]
+var questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20]
 
 var startGame = function() {
     q1();
     currentQ = 1;
-    timeLeft = 60;
+    timeLeft = 5;
     correctAnswers = 0;
     wrongAnswers = 0;
+    totalQuestions = 0;
     $('#numbercorrect').text(correctAnswers);
     $('#numberincorrect').text(wrongAnswers);
     $('#homer').text("Any key? Which one's the any key?");
@@ -35,6 +36,10 @@ function endGame() {
         "<h4>Press Start to Try Again!</h4>" +
         "</center>"
     )
+    $('#anykey').trigger('play');
+    $('#homer').text("Any key? Which one's the any key?");
+    $('#homerface').html("<img src='assets/images/homerthink2.jpg'>");
+    
 }
 
 function timer() {
@@ -107,6 +112,21 @@ function cycle() {
         q15();
     }
     else if (totalQuestions === 15) {
+        q16();
+    }
+    else if (totalQuestions === 16) {
+        q17();
+    }
+    else if (totalQuestions === 17) {
+        q18();
+    }
+    else if (totalQuestions === 18) {
+        q19();
+    }
+    else if (totalQuestions === 19) {
+        q20();
+    }
+    else if (totalQuestions === 20) {
         endGame();
     }
 
@@ -466,6 +486,111 @@ function q15(){
         "</label><br>" +
         "<label>" +
         "<input type='radio' name='choice' value='1'> 475" +
+        "</label><br>" +
+    "</div>" +
+    "</div>" 
+    )
+}
+function q16(){
+    $('#questions').html(
+        "<br>" +
+        "<div class='col col-xs-12 col-lg-12'>" +
+        "<h3>Who called the show 'the dumbest thing I've ever seen'?</h3>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Louis Theroux" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='0'> Barbara Bush" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Seth McFarlane" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Hillary Duff" +
+        "</label><br>" +
+    "</div>" +
+    "</div>" 
+    )
+}
+function q17(){
+    $('#questions').html(
+        "<br>" +
+        "<div class='col col-xs-12 col-lg-12'>" +
+        "<h3>Many characters' last names are street names in what city?</h3>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='0'> Portland, OR" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Dallas, TX" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Washington, DC" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> San Diego, CA" +
+        "</label><br>" +
+    "</div>" +
+    "</div>" 
+    )
+}
+function q18(){
+    $('#questions').html(
+        "<br>" +
+        "<div class='col col-xs-12 col-lg-12'>" +
+        "<h3>How long did it take Danny Elfman to write the theme?</h3>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Two weeks" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Thirteen hours" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='0'> Two days" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> Twenty minutes" +
+        "</label><br>" +
+    "</div>" +
+    "</div>" 
+    )
+}
+function q19(){
+    $('#questions').html(
+        "<br>" +
+        "<div class='col col-xs-12 col-lg-12'>" +
+        "<h3>Where do  Kang and Kodos get their names?</h3>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> A Crichton novel" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> A marvel comic" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> A song popularized in the 1930s" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='0'> Star Trek" +
+        "</label><br>" +
+    "</div>" +
+    "</div>" 
+    )
+}
+function q20(){
+    $('#questions').html(
+        "<br>" +
+        "<div class='col col-xs-12 col-lg-12'>" +
+        "<h3>How old is Ned Flanders?</h3>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> 46" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> 32" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='0'> 60" +
+        "</label><br>" +
+        "<label>" +
+        "<input type='radio' name='choice' value='1'> 55" +
         "</label><br>" +
     "</div>" +
     "</div>" 
