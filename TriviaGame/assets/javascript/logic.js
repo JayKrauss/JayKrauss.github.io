@@ -39,6 +39,7 @@ function endGame() {
     $('#anykey').trigger('play');
     $('#homer').text("Any key? Which one's the any key?");
     $('#homerface').html("<img src='assets/images/homerthink2.jpg'>");
+    stop();
     
 }
 
