@@ -1,0 +1,47 @@
+body {
+    background: url('../../assets/images/background2.png');
+}
+
+.banner {
+    background-color: lightgray;
+    background: url('../../assets/images/banner2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid grey 5px;
+}
+
+.buttons {
+    height: 10%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display {
+    background-color: lightgray;
+    background: url('../../assets/images/paper.png');
+    height: auto;
+    min-height: 40%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid grey 5px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    margin: 3px;
+}
+
+h3, h4 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+}
