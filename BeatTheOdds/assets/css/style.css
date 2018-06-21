@@ -165,4 +165,36 @@ position: relative;
       cursor: pointer;
 }
 
+#modal-background {
+    background: none;
+}
+
+#singletwenty {
+    position: absolute;
+    left: 58.5%;
+}
+
+#singlefifty {
+    position: absolute;
+    left: 58.5%;
+}
+
+#singlehundred {
+    position: absolute;
+    left: 58.5%;
+}
+#twentystack {
+    position: absolute;
+    left: 58.5%;
+}
+
+#fiftystack {
+    position: absolute;
+    left: 58.5%;
+}
+
+#hundredstack {
+    position: absolute;
+    left: 58.5%;
+}
 

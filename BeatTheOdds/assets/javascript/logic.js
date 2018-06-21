@@ -1,9 +1,13 @@
 //Global variables
-var timeLeft = 60;
+var timeLeft = 5;
 var intervalId;
 var currentBet = 0;
 var payout = 1;
 var multiplier = 3;
+
+var twenties = 0;
+var fifties = 0;
+var hundreds = 0;
 
 //Initialize function
 function startGame() {
@@ -29,6 +33,7 @@ function run(){
 
 function stop() {
     clearInterval(intervalId);
+    $('#nameModal').modal('toggle');
 }
 //End timer functions
 
@@ -57,9 +62,19 @@ function bounce(timeFraction) {
   }
 
 $(document).ready(function(){
+
+    $('#singletwenty').hide();
+    $('#singlefifty').hide();
+    $('#singlehundred').hide();
+
+    $('#twentystack').hide();
+    $('#fiftystack').hide();
+    $('#hundredstack').hide();
+
 //Begin betting mechanics
 $('#twentychipbtn').on('click', function() {
     currentBet = currentBet + 20;
+    twenties = twenties + 1;
     console.log(currentBet);
     $('#current-bet').text(currentBet);
     payoutMath();
@@ -72,13 +87,23 @@ $('#twentychipbtn').on('click', function() {
 
       twentychipbtn.style.left = timePassed / 5 + 'px';
 
-      if (timePassed > 1000) clearInterval(timer);
-
+      if (timePassed > 1000) {
+        twentychipbtn.style.left = 0;
+        if (twenties < 2) {
+            $('#singletwenty').show();
+        }
+        else if (twenties >= 2){
+            $('#singletwenty').hide();
+            $('#twentystack').show();
+        }
+        clearInterval(timer);
+      }
     }, 20);
 
 })
 $('#fiftychipbtn').on('click', function() {
     currentBet = currentBet + 50;
+    fifties = fifties + 1;
     console.log(currentBet);
     $('#current-bet').text(currentBet);
     payoutMath();
@@ -91,12 +116,22 @@ $('#fiftychipbtn').on('click', function() {
 
       fiftychipbtn.style.left = timePassed / 5 + 'px';
 
-      if (timePassed > 1000) clearInterval(timer);
-
+      if (timePassed > 1000) {
+          clearInterval(timer);
+          fiftychipbtn.style.left = 0;
+          if (fifties < 2) {
+            $('#singlefifty').show();
+        }
+        else if (fifties >= 2){
+            $('#singlefifty').hide();
+            $('#fiftystack').show();
+        }
+      }
     }, 20);
 })
 $('#hundredchipbtn').on('click', function() {
     currentBet = currentBet + 100;
+    hundreds = hundreds + 1;
     console.log(currentBet);
     $('#current-bet').text(currentBet);
     payoutMath();
@@ -109,12 +144,24 @@ $('#hundredchipbtn').on('click', function() {
 
       hundredchipbtn.style.left = timePassed / 5 + 'px';
 
-      if (timePassed > 1000) clearInterval(timer);
-
+      if (timePassed > 1000) {
+          clearInterval(timer);
+          hundredchipbtn.style.left = 0;
+          if (hundreds < 2) {
+            $('#singlehundred').show();
+        }
+        else if (hundreds >= 2){
+            $('#singlehundred').hide();
+            $('#hundredstack').show();
+        }
+      }
+      
     }, 20);
+
 })
 
 $('#footballtracker').on('click', function() {
+    startGame();
     //Animation
     let start = Date.now();
 
