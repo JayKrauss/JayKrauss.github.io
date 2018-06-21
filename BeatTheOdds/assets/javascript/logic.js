@@ -33,6 +33,7 @@ function run(){
 
 function stop() {
     clearInterval(intervalId);
+    chipHide();
     $('#nameModal').modal('toggle');
 }
 //End timer functions
@@ -61,8 +62,7 @@ function bounce(timeFraction) {
     return Math.pow(timeFraction, 2);
   }
 
-$(document).ready(function(){
-
+function chipHide() {
     $('#singletwenty').hide();
     $('#singlefifty').hide();
     $('#singlehundred').hide();
@@ -70,6 +70,11 @@ $(document).ready(function(){
     $('#twentystack').hide();
     $('#fiftystack').hide();
     $('#hundredstack').hide();
+}
+
+$(document).ready(function(){
+
+    chipHide();
 
 //Begin betting mechanics
 $('#twentychipbtn').on('click', function() {
