@@ -75,7 +75,11 @@ function chipHide() {
 $(document).ready(function(){
 
     chipHide();
-
+    
+    $('.form1').on('click', function() {
+        $('#leaderModal').modal('toggle');
+    })
+    
 //Begin betting mechanics
 $('#twentychipbtn').on('click', function() {
     currentBet = currentBet + 20;
