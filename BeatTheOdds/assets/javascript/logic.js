@@ -177,8 +177,8 @@ function startDemo() {
     var timeLeft = 120;
     timer();
     run();
-    $('#dall').show();
-    $('#wasr').show();
+    $('#dallas').show();
+    $('#washington').show();
 
 rightSixty();
 
