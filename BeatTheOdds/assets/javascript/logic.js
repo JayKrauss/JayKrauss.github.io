@@ -86,8 +86,8 @@ setTimeout(
 function startGame() {
     timer2();
     run();
-    $('#atll').show();
-    $('#oakr').show();
+    $('#ATLL').show();
+    $('#OAKR').show();
     // $('#'+ homeTeamAlias + 'l').show();
     // $('#'+ awayTeamAlias + 'l').show();
     animateWithData();
@@ -177,8 +177,8 @@ function startDemo() {
     var timeLeft = 120;
     timer();
     run();
-    $('#dallas').show();
-    $('#washington').show();
+    $('#DALL').show();
+    $('#WASR').show();
 
 rightSixty();
 
