@@ -1,0 +1,32 @@
+body {
+    background-image: url('../../assets/images/dark_wood.png'); 
+
+}
+
+nav {
+    background-image: url('../../assets/images/irongrip.png');
+    border-bottom: solid black 2px;
+    
+}
+
+.beat, .simpsons, .gify {
+    margin-bottom:15px;
+    background-color: lightgray;
+    height: 275px;
+}
+
+#profilepic {
+    margin: 10px;
+}
+
+#joshuatree {
+    margin-left: 25px;
+}
+
+h4 {
+    font-family: 'Markazi Text', serif;
+}
+
+h5 {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
